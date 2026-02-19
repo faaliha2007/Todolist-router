@@ -6,7 +6,7 @@ function Todoitem(props) {
     {
          var temparr = activityarr.filter(function(item){
             
-            if(item.id == deleted)
+            if(item.id === deleted)
             {
                 return false
             }
