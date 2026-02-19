@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import Landing from "./Landing"
 import { useNavigate } from "react-router-dom"
 
 
@@ -37,9 +36,9 @@ if(item.username === eusername && item.password === epassword)
  
     })
 
-if(userfound == false)
+if(userfound === false)
 {
-    console.log("login successfull")
+    console.log("login failed")
     setruser(false)
 }
 
@@ -57,7 +56,7 @@ if(userfound == false)
                 <div className="flex flex-col gap-2 my-2">
                     <input onChange={userinput} className=" bg-transparent p-1 border rounded-md border-black w-52" type="text" placeholder="username" />
                     <input onChange={pinput} className="bg-transparent p-1 border rounded-md border-black w-52" type="text" placeholder="password" />
-                    <button onClick={checkuser} className="bg-yellow-500 border rounded-md w-24 p-1 font-medium">Signup</button>
+                    <button onClick={checkuser} className="bg-yellow-500 border rounded-md w-24 p-1 font-medium">Login</button>
                     <p>Dont you have an account? <Link className="underline" to={'/signup'}>Signup</Link></p>
                 </div>
             </div>
